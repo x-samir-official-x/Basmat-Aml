@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>إدارة التبرعات — بسمة أمل</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+  <script defer src="dashboard.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dash-light">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="images/Basmat aml.png" alt="بسمة أمل" class="logo">
+      <div class="brand-text">
+        <h1>بسمة أمل</h1>
+        <small>لوحة التحكم</small>
+      </div>
+    </div>
+
+    <nav class="side-nav">
+      <a href="dashboard.html">الملخص</a>
+      <a href="activities.html">الأنشطة</a>
+      <a href="donations.html" class="active">التبرعات</a>
+      <a href="volunteers.html">المتطوعين</a>
+      <a href="settings.html">الإعدادات</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="logoutBtn" class="btn-muted">تسجيل خروج</button>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+    <header class="dash-header">
+      <div class="container">
+        <h2>إدارة التبرعات</h2>
+        <div class="header-actions">
+          <button class="btn btn-accent" id="addDonationBtn">+ إضافة تبرع</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="container dash-content">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>قائمة التبرعات</h3>
+        </div>
+        <div class="panel-body table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>اسم المتبرع</th>
+                <th>نوع التبرع</th>
+                <th>القيمة / الكمية</th>
+                <th>التاريخ</th>
+                <th>الحالة</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="donationsTableBody">
+              <tr>
+                <td>أحمد علي</td>
+                <td>مبلغ مالي</td>
+                <td>5000 ج.م</td>
+                <td>10/03/2025</td>
+                <td><span class="badge badge-active">تم الاستلام</span></td>
+                <td>
+                  <button class="btn-small edit">تعديل</button>
+                  <button class="btn-small danger delete">حذف</button>
+                </td>
+              </tr>
+              <tr>
+                <td>منى خالد</td>
+                <td>ملابس</td>
+                <td>50 قطعة</td>
+                <td>05/03/2025</td>
+                <td><span class="badge badge-pending">قيد التسليم</span></td>
+                <td>
+                  <button class="btn-small edit">تعديل</button>
+                  <button class="btn-small danger delete">حذف</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  <!-- إضافة تبرع (مودال) -->
+  <div class="modal" id="donationModal">
+    <div class="modal-content">
+      <div class="modal-head">
+        <h3>إضافة / تعديل تبرع</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="donationForm">
+          <label>اسم المتبرع</label>
+          <input type="text" name="donorName" required>
+
+          <label>نوع التبرع</label>
+          <select name="donationType" required>
+            <option value="money">مبلغ مالي</option>
+            <option value="food">مواد غذائية</option>
+            <option value="clothes">ملابس</option>
+            <option value="other">أخرى</option>
+          </select>
+
+          <label>القيمة / الكمية</label>
+          <input type="text" name="amount" required>
+
+          <label>التاريخ</label>
+          <input type="date" name="date" required>
+
+          <label>الحالة</label>
+          <select name="status" required>
+            <option value="received">تم الاستلام</option>
+            <option value="pending">قيد التسليم</option>
+          </select>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-accent">حفظ</button>
+            <button type="button" class="btn btn-muted modal-close">إلغاء</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="dash-footer">
+      <div class="container">
+        <small class="muted">© <span id="dashYear"></span> بسمة أمل — جميع الحقوق محفوظة</small>
+      </div>
+    </footer>
+  </main>
+
+  </div>
+
+</body>
+</html>

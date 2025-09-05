@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>بسمة أمل — Basmat Amal</title>
+  <meta name="description" content="بسمة أمل — فريق تطوعي لنشر الخير ودعم المحتاجين وتعليم الأطفال. انضم، تبرع، وشارك في صنع الأمل.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/Icon.png">
+</head>
+<body class="theme-rtl">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div>تواصل معنا: <a href="mailto:info@basmatamal.org">basmat.amal.soh@gmail.com</a></div>
+      <div>
+        <button id="langToggle" class="btn-linetline" aria-label="تبديل اللغة">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/Basmat aml.png" alt="بسمة أمل" class="logo">
+        <div class="brand-text">
+          <div class="org-name">بسمة أمل</div>
+          <div class="tagline muted">ننشر الأمل ونصنع البسمة</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <a href="#home">الرئيسية</a>
+        <a href="#about">عن الفريق</a>
+        <a href="#activities">أنشطتنا</a>
+        <a href="#getinvolved">انضم إلينا</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+
+      <div class="cta-group">
+        <button class="btn btn-accent" id="donateBtn">تبرع الآن</button>
+        <button class="btn btn-timetline" id="volunteerBtn">تطوع معنا</button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="قائمة">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero" aria-label="الرئيسية">
+    <div class="container hero-inner">
+      <div class="hero-left fade-in">
+        <span class="eyebrow">فريق بسمة أمل</span>
+        <h1 class="hero-title" data-en="Bring Smiles. Create Hope." data-ar="معًا نرسم بسمة ونخلق أمل">معًا نرسم بسمة ونخلق أمل</h1>
+        <p class="hero-sub" data-en="Support families, educate children & join our volunteer community." data-ar="ادعم الأسر، علّم الأطفال، وانضم لمجتمع المتطوعين">ادعم الأسر، علّم الأطفال، وانضم لمجتمع المتطوعين</p>
+
+        <div class="hero-ctas">
+          <button class="btn btn-accent" id="heroDonate">تبرع بسهم (20ج)</button>
+          <button class="btn btn-outline" id="heroVolunteer">انضم كمتطوع</button>
+        </div>
+
+        <div class="quick-stats" aria-hidden="true">
+          <div><strong>+1,200</strong><span class="muted">مستفيد</span></div>
+          <div><strong>+350</strong><span class="muted">متطوع</span></div>
+          <div><strong>8</strong><span class="muted">حملات</span></div>
+        </div>
+      </div>
+
+      <div class="hero-right fade-in" aria-hidden="true">
+        <div class="hero-card">
+          <div class="hero-image" style="background-image:url('images/ramadan\ Basmt\ Aml.png');"></div>
+          <div class="body">
+            <div class="badge muted">مشروع رمضان</div>
+            <h3>شنط رمضان — سهم الخير</h3>
+            <p>سهم واحد بـ 20 جنيه يجهز شنطة كاملة ويوصل لأسرة محتاجة قبل العيد.</p>
+            <div class="card-actions">
+              <button class="btn btn-donate" id="cardDonate">شارك بسهم</button>
+              <button class="btn btn-outline" id="cardLearn">اعرف أكتر</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- decorative wave -->
+    <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,96 C240,180 480,0 720,48 C960,96 1200,40 1440,96 L1440 120 L0 120 Z"></path>
+    </svg>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about fade-in">
+    <div class="container grid-2">
+      <div>
+        <h2 data-en="Who we are" data-ar="من نحن">من نحن</h2>
+        <p class="lead" data-en="A volunteer movement creating real impact." data-ar="حركة تطوعية تخلق تأثير حقيقي في حياة الناس.">
+          فريق بسمة أمل حركة تطوعية تعمل على دعم المحتاجين، تمكين الأطفال من خلال التعليم، وتنظيم حملات توعية وخدمات اجتماعية.
+        </p>
+
+        <ul class="features">
+          <li>برامج تعليمية وورش للأطفال</li>
+          <li>توزيع مساعدات غذائية ومستلزمات أساسية</li>
+          <li>تدريب المتطوعين وبناء قدرات المجتمع</li>
+        </ul>
+      </div>
+
+      <div class="about-visual">
+        <img src="images/team.jpeg" alt="عن الفريق">
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section id="activities" class="section activities fade-in">
+    <div class="container center">
+      <h2>أنشطتنا</h2>
+      <p class="lead">نماذج من حملاتنا، وأنشطتنا الميدانية، وورش العمل التعليمية.</p>
+
+      <div class="cards-grid" style="margin-top:26px">
+        <article class="card">
+          <img src="images/ramadan Basmt Aml.png" alt="شنط رمضان">
+          <div class="card-body">
+            <h4>شنط رمضان</h4>
+            <p>تجهيز وتوزيع شنط غذائية متكاملة للأسر قبل حلول رمضان.</p>
+          </div>
+          <div class="card-footer">
+            <div class="muted">التكلفة: 20 ج</div>
+            <div>
+              <button class="btn-small btn-accent" onclick="openDonate(20)">تبرع</button>
+              <a href="#" class="link muted" style="margin-right:10px">قراءة التقرير</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/Educational workshops.jpeg" alt="ورش تعليمية">
+          <div class="card-body">
+            <h4>ورش تعليمية</h4>
+            <p>دورات لتقوية مهارات الأطفال في القراءة والرياضيات والمهارات الحياتية.</p>
+          </div>
+          <div class="card-footer">
+            <div class="muted">التكلفة: حسب الدورة</div>
+            <div>
+              <button class="btn-small btn-accent" onclick="openDonate(100)">تبرع</button>
+              <a href="#" class="link muted" style="margin-right:10px">تفاصيل</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/awareness campaigns.jpg" alt="حملات توعية">
+          <div class="card-body">
+            <h4>حملات توعية</h4>
+            <p>نظم لقاءات وزيارات للتوعية الصحية والتعليمية في المناطق المحتاجة.</p>
+          </div>
+          <div class="card-footer">
+            <div class="muted">متاحة للجميع</div>
+            <div>
+              <button class="btn-small btn-accent" onclick="openDonate(50)">شارك</button>
+              <a href="#" class="link muted" style="margin-right:10px">تفاصيل</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section class="section fade-in">
+    <div class="container">
+      <h2 class="center">قصص ملهمة</h2>
+      <p class="lead center">لحظات صغيرة، آثار كبيرة — شوف تأثير عملك</p>
+
+      <div class="stories" aria-label="قصص">
+        <div class="story">
+          <img src="images/Basmat aml.png" alt="قصة 1">
+          <div class="s-body">
+            <h4>أمل</h4>
+            <p class="muted">سنة من التعليم المكثف ساعدت أمل تكمل دراستها بثقة.</p>
+          </div>
+        </div>
+
+        <div class="story">
+          <img src="images/Basmat aml.png" alt="قصة 2">
+          <div class="s-body">
+            <h4>مبادرة طبية</h4>
+            <p class="muted">حملات صحية شملت فحوصات وتوعية في القرى النائية.</p>
+          </div>
+        </div>
+
+        <div class="story">
+          <img src="images/Basmat aml.png" alt="قصة 3">
+          <div class="s-body">
+            <h4>تدريب مهني</h4>
+            <p class="muted">شباب تم تدريبهم وحصلوا على فرص عمل حقيقية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED -->
+  <section id="getinvolved" class="section fade-in">
+    <div class="container center">
+      <h2>انضم إلينا أو تبرع</h2>
+      <p class="lead">شاركنا وقتك أو تبرعك — كل مساعدة بتفرق</p>
+
+      <div class="form-wrap" style="margin-top:18px;">
+        <form id="volunteerForm" class="form" aria-label="نموذج الانضمام">
+          <div class="form-grid">
+            <label>
+              <span>الاسم الكامل</span>
+              <input type="text" name="name" required placeholder="مثال: سمير سيد">
+            </label>
+
+            <label>
+              <span>الهاتف</span>
+              <input type="tel" name="phone" required placeholder="+20 10xxxxxxxx">
+            </label>
+
+            <label>
+              <span>البريد الإلكتروني</span>
+              <input type="email" name="email" placeholder="optional@mail.com">
+            </label>
+
+            <label>
+              <span>المجال المفضل</span>
+              <select name="area">
+                <option>التعليم</option>
+                <option>المساعدات الإنسانية</option>
+                <option>التسويق</option>
+                <option>التمويل</option>
+              </select>
+            </label>
+          </div>
+
+          <label style="display:block;margin-top:12px">
+            <span>ماذا تريد أن تقدم؟</span>
+            <textarea name="notes" rows="3" placeholder="خبراتك أو متى تقدر تتطوع..."></textarea>
+          </label>
+
+          <div style="display:flex;gap:12px;margin-top:12px;justify-content:center">
+            <button class="btn btn-donate" type="submit">أرسل الآن</button>
+            <button class="btn btn-outline" type="reset">إفراغ</button>
+          </div>
+          <div id="formMsg" style="margin-top:15px; font-weight:bold; text-align:center;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section fade-in">
+    <div class="container grid-2">
+      <div>
+        <h2>تواصل معنا</h2>
+        <p><strong>البريد الإلكتروني:</strong> <a href="mailto:info@basmatamal.org">basmat.amal.soh@gmail.com</a></p>
+        <p><strong>التليفون:</strong> +20 1200505324</p>
+        <p><strong>العنوان:</strong> الإسماعيلية، مصر</p>
+        <p class="muted">ساعات العمل: طوال ايام الأسبوع 24 ساعه</p>
+      </div>
+      <div>
+        <h4>تابعنا</h4>
+        <div class="socials">
+          <a href="https://www.facebook.com/share/16iwEvkHJy/" aria-label="فيسبوك">فيسبوك</a>
+          <a href="https://www.tiktok.com/@xx.soh.official.xx?_t=ZS-8ykMtOqZZ6W&_r=1" aria-label="تيك توك">تيك توك</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="logo-sm" src="images/Basmat aml.png" alt="logo">
+        <p class="muted">بسمة أمل — كل بسمة بتفرق</p>
+      </div>
+
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul style="list-style:none;padding:0">
+          <li><a href="#activities">أنشطتنا</a></li>
+          <li><a href="#getinvolved">انضم إلينا</a></li>
+          <li><a href="#contact">تواصل</a></li>
+        </ul>
+        <a href="login.html">لوحة التحكم</a>
+      </div>
+
+      <div>
+        <h4>حقوق</h4>
+        <p>© <span id="year"></span> بسمة أمل. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donate Modal -->
+  <div id="donateModal" class="donate-modal" aria-hidden="true">
+    <div class="donate-backdrop" onclick="closeDonate()"></div>
+    <div class="donate-panel" role="dialog" aria-modal="true">
+      <h3 class="center">تبرع الآن — سهم الخير</h3>
+      <p class="center muted">اختر المبلغ أو ضع مبلغ مخصص. كل سهم 20 جنيه يجهز شنطة كاملة.</p>
+
+      <div class="donate-options">
+        <button class="btn btn-accent" onclick="processDonate(20)">20 جنيه</button>
+        <button class="btn btn-accent" onclick="processDonate(50)">50 جنيه</button>
+        <button class="btn btn-accent" onclick="processDonate(100)">100 جنيه</button>
+      </div>
+
+      <label style="display:block;margin-top:12px">مبلغ مخصص (جنيه)</label>
+      <input id="customAmount" type="number" placeholder="اكتب المبلغ" />
+
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:14px">
+        <button class="btn btn-primary" onclick="confirmDonate()">تأكيد</button>
+        <button class="btn btn-outline" onclick="closeDonate()">إلغاء</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+</html>

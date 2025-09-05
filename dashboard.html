@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>لوحة التحكم — بسمة أمل</title>
+  <meta name="description" content="لوحة تحكم إدارة بسمة أمل — إدارة الأنشطة، المتطوعين، والتبرعات">
+
+  <!-- ربط ملفات النمط والسلوك -->
+  <link rel="stylesheet" href="dashboard.css">
+  <script defer src="dashboard.js"></script>
+
+  <!-- خطوط -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<h2 class="dash-header" style="text-align: center; margin-top: 20px;">
+    مرحبًا، إداري بسمة أمل
+</h2>
+
+<body class="dash-light">
+    
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="images/Basmat aml.png" alt="بسمة أمل" class="logo" >
+      <div class="brand-text">
+        <h1>بسمة أمل</h1>
+        <small>لوحة التحكم</small>
+      </div>
+    </div>
+
+    <nav class="side-nav">
+      <a href="dashboard.html" class="active">الملخص</a>
+      <a href="activities.html">الأنشطة</a>
+      <a href="donations.html">التبرعات</a>
+      <a href="volunteers.html">المتطوعين</a>
+      <a href="settings.html">الإعدادات</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="logoutBtn" class="btn-muted">تسجيل خروج</button>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+    <!-- Header -->
+    <header class="dash-header">
+      <div class="container">
+        <h2>مرحبًا، إداري بسمة أمل</h2>
+        <div class="header-actions">
+          <div class="search">
+            <input type="search" id="searchInput" placeholder="ابحث عن متطوع / نشاط..." />
+          </div>
+          <div class="profile">
+  <img src="images/avatars/default.png" alt="admin" class="avatar" id="user-avatar">
+  <div class="profile-info">
+    <div class="name" id="user-name">اسم المستخدم</div>
+    <div class="role muted" id="user-role">الدور</div>
+  </div>
+</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard content -->
+    <section class="container dash-content">
+      <!-- Stats cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-title">المتطوعين</div>
+          <div class="stat-value counter" data-target="350">0</div>
+          <div class="stat-sub muted">المسجلين حتى الآن</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-title">التبرعات (جنيه)</div>
+          <div class="stat-value counter" data-target="120000">0</div>
+          <div class="stat-sub muted">إجمالي المبالغ المستلمة</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-title">الأنشطة القادمة</div>
+          <div class="stat-value counter" data-target="8">0</div>
+          <div class="stat-sub muted">مجدولة</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-title">المستفيدون</div>
+          <div class="stat-value counter" data-target="1250">0</div>
+          <div class="stat-sub muted">حالات تم مساعدتها</div>
+        </div>
+      </div>
+
+      <!-- Quick actions -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>إجراءات سريعة</h3>
+        </div>
+        <div class="panel-body quick-actions">
+          <button class="btn" onclick="location.href='activities.html'">أضف نشاط جديد</button>
+          <button class="btn btn-accent" onclick="openDonate(20)">تسجيل تبرع سريع</button>
+          <button class="btn btn-outline" onclick="location.href='volunteers.html'">إدارة المتطوعين</button>
+        </div>
+      </div>
+
+      <!-- Latest volunteers table -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>أحدث المتطوعين</h3>
+          <small class="muted">آخر 10 طلبات</small>
+        </div>
+        <div class="panel-body table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>الاسم</th>
+                <th>الهاتف</th>
+                <th>المجال</th>
+                <th>الحالة</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="volunteersTableBody">
+              <!-- أمثلة أولية؛ سيقوم script.js بملئ / تعديل المحتوى عمليًا -->
+              <tr>
+                <td>سارة علي</td>
+                <td>01100000001</td>
+                <td>التعليم</td>
+                <td><span class="badge badge-pending">قيد المراجعة</span></td>
+                <td>
+                  <button class="btn-small edit">تعديل</button>
+                  <button class="btn-small danger delete">حذف</button>
+                </td>
+              </tr>
+              <tr>
+                <td>محمد حسن</td>
+                <td>01000000002</td>
+                <td>التسويق</td>
+                <td><span class="badge badge-active">مفعل</span></td>
+                <td>
+                  <button class="btn-small edit">تعديل</button>
+                  <button class="btn-small danger delete">حذف</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Recent activities (cards) -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>الأنشطة الأخيرة</h3>
+        </div>
+        <div class="panel-body cards-grid">
+          <article class="activity-mini">
+            <img src="assets/activity1.jpg" alt="">
+            <div class="meta">
+              <h4>شنط رمضان</h4>
+              <p class="muted">توزيع 300 شنطة في محافظة القاهرة</p>
+            </div>
+            <div class="actions">
+              <button class="btn-small" onclick="location.href='activities.html'">تفاصيل</button>
+              <button class="btn-small danger" onclick="alert('حذف نشاط تجريبي')">حذف</button>
+            </div>
+          </article>
+
+          <article class="activity-mini">
+            <img src="assets/activity2.jpg" alt="">
+            <div class="meta">
+              <h4>ورشة تعليمية</h4>
+              <p class="muted">دورة رياضيات للأطفال</p>
+            </div>
+            <div class="actions">
+              <button class="btn-small" onclick="location.href='activities.html'">تفاصيل</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer inside main (small) -->
+    <footer class="dash-footer">
+      <div class="container">
+        <small class="muted">© <span id="dashYear"></span> بسمة أمل — جميع الحقوق محفوظة</small>,
+        <a href="index.html">العودة للموقع</a>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>

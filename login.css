@@ -1,0 +1,139 @@
+/* فيديو الخلفية */
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+
+/* الرسالة العلوية */
+.admin-message {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* جسم الصفحة */
+body {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* صندوق تسجيل الدخول */
+.login-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+    width: 320px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    backdrop-filter: blur(8px);
+}
+
+/* عنوان الفورم */
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #0b2340;
+    font-weight: 700;
+}
+
+/* الحقول */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 18px 0;
+    border: 1px solid #d54f76;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.login-container input:focus {
+    border-color: #d54f76;
+    box-shadow: 0 0 8px rgba(0, 150, 136, 0.3);
+    outline: none;
+}
+
+/* حاوية الباسورد */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #d54f76;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #d54f76;
+}
+
+/* الزر */
+button {
+    background: linear-gradient(135deg, #0b2340, #0b2340);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.5s ease-in-out, 
+                transform 0.4s ease-in-out, 
+                box-shadow 0.4s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #d54f76, #ffdde1);
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* رسالة الخطأ */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* أنيميشن */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

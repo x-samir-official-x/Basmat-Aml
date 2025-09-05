@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>إدارة المتطوعين — بسمة أمل</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+  <script defer src="dashboard.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dash-light">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="images/Basmat aml.png" alt="بسمة أمل" class="logo">
+      <div class="brand-text">
+        <h1>بسمة أمل</h1>
+        <small>لوحة التحكم</small>
+      </div>
+    </div>
+
+    <nav class="side-nav">
+      <a href="dashboard.html">الملخص</a>
+      <a href="activities.html">الأنشطة</a>
+      <a href="donations.html">التبرعات</a>
+      <a href="volunteers.html" class="active">المتطوعين</a>
+      <a href="settings.html">الإعدادات</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="logoutBtn" class="btn-muted">تسجيل خروج</button>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+    <header class="dash-header">
+      <div class="container">
+        <h2>إدارة المتطوعين</h2>
+        <div class="header-actions">
+          <button class="btn btn-accent" id="addVolunteerBtn">+ إضافة متطوع</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="container dash-content">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>قائمة المتطوعين</h3>
+        </div>
+        <div class="panel-body table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>اسم المتطوع</th>
+                <th>البريد الإلكتروني</th>
+                <th>رقم الهاتف</th>
+                <th>المجال</th>
+                <th>عدد المشاركات</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="volunteersTableBody">
+              <tr>
+                <td>خالد محمد</td>
+                <td>khaled@example.com</td>
+                <td>01012345678</td>
+                <td>تنظيم الفعاليات</td>
+                <td>5</td>
+                <td>
+                  <button class="btn-small edit">تعديل</button>
+                  <button class="btn-small danger delete">حذف</button>
+                </td>
+              </tr>
+              <tr>
+                <td>سارة علي</td>
+                <td>sara@example.com</td>
+                <td>01098765432</td>
+                <td>التسويق</td>
+                <td>3</td>
+                <td>
+                  <button class="btn-small edit">تعديل</button>
+                  <button class="btn-small danger delete">حذف</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- إضافة / تعديل متطوع (مودال) -->
+  <div class="modal" id="volunteerModal">
+    <div class="modal-content">
+      <div class="modal-head">
+        <h3>إضافة / تعديل متطوع</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="volunteerForm">
+          <label>اسم المتطوع</label>
+          <input type="text" name="volunteerName" required>
+
+          <label>البريد الإلكتروني</label>
+          <input type="email" name="email" required>
+
+          <label>رقم الهاتف</label>
+          <input type="tel" name="phone" required>
+
+          <label>المجال</label>
+          <select name="field" required>
+            <option value="events">تنظيم الفعاليات</option>
+            <option value="marketing">التسويق</option>
+            <option value="logistics">اللوجستيات</option>
+            <option value="other">أخرى</option>
+          </select>
+
+          <label>عدد المشاركات</label>
+          <input type="number" name="participations" min="0" required>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-accent">حفظ</button>
+            <button type="button" class="btn btn-muted modal-close">إلغاء</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="dash-footer">
+      <div class="container">
+        <small class="muted">© <span id="dashYear"></span> بسمة أمل — جميع الحقوق محفوظة</small>
+      </div>
+    </footer>
+  </main>
+  </div>
+
+</body>
+</html>

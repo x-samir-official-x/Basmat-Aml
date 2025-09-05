@@ -1,0 +1,224 @@
+/* ========== الأساسيات ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fb;
+  color: #333;
+}
+
+/* ألوان المشروع */
+:root {
+  --accent: #d54f76; /* لون اللوجو الرئيسي */
+  --accent-dark: #0b2340;
+  --light-bg: #f7f9fb;
+  --dark-bg: #1f2937;
+  --light-text: #fff;
+  --muted: #888;
+}
+
+/* ========== الشريط الجانبي ========== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 230px;
+  height: 100%;
+  background: var(--accent);
+  color: var(--light-text);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar .brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand-text h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.side-nav a {
+  display: block;
+  padding: 10px;
+  color: var(--light-text);
+  border-radius: 8px;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.side-nav a:hover,
+.side-nav a.active {
+  background: var(--accent-dark);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.btn-muted {
+  background: transparent;
+  color: var(--light-text);
+  border: 1px solid var(--light-text);
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-muted:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ========== المحتوى الرئيسي ========== */
+.main {
+  margin-right: 250px;
+  padding: 0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4CAF50; /* لون أخضر للنضارة */
+}
+
+.profile-info .name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.profile-info .role {
+  font-size: 12px;
+  color: #777;
+  margin-top: 2px;
+  font-style: italic;
+}
+
+.dash-header {
+  background: var(--light-bg);
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dash-content {
+  padding: 20px;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.panel-head {
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  background: var(--light-bg);
+}
+
+.panel-head h3 {
+  font-size: 18px;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--light-text);
+}
+
+.btn-accent:hover {
+  background: var(--accent-dark);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ========== الوضع الداكن ========== */
+.dash-dark {
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+}
+
+.dash-dark .panel {
+  background: #374151;
+  color: var(--light-text);
+}
+
+.dash-dark .dash-header {
+  background: #2d3748;
+}
+
+.dash-dark .panel-head {
+  background: #2d3748;
+  border-bottom: 1px solid #444;
+}
+
+.dash-dark input,
+.dash-dark select {
+  background: #4b5563;
+  border: 1px solid #666;
+  color: var(--light-text);
+}
+
+.dash-dark .btn-muted {
+  border-color: var(--light-text);
+}
+
+.dash-dark .side-nav a:hover,
+.dash-dark .side-nav a.active {
+  background: rgba(255, 255, 255, 0.15);
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>الإعدادات — بسمة أمل</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+  <script defer src="dashboard.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dash-light">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="images/Basmat aml.png" alt="بسمة أمل" class="logo">
+      <div class="brand-text">
+        <h1>بسمة أمل</h1>
+        <small>لوحة التحكم</small>
+      </div>
+    </div>
+
+    <nav class="side-nav">
+      <a href="dashboard.html">الملخص</a>
+      <a href="activities.html">الأنشطة</a>
+      <a href="donations.html">التبرعات</a>
+      <a href="volunteers.html">المتطوعين</a>
+      <a href="settings.html" class="active">الإعدادات</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="logoutBtn" class="btn-muted">تسجيل خروج</button>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+    <header class="dash-header">
+      <div class="container">
+        <h2>الإعدادات</h2>
+      </div>
+    </header>
+
+    <section class="container dash-content">
+
+      <!-- إعدادات الحساب -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>إعدادات الحساب</h3>
+        </div>
+        <div class="panel-body">
+          <form id="accountSettingsForm">
+            <label>الاسم</label>
+            <input type="text" name="name" value="مدير النظام" required>
+
+            <label>البريد الإلكتروني</label>
+            <input type="email" name="email" value="admin@example.com" required>
+
+            <label>كلمة المرور الجديدة</label>
+            <input type="password" name="password" placeholder="اتركه فارغًا إذا لم ترغب بالتغيير">
+
+            <button type="submit" class="btn btn-accent">حفظ التغييرات</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- إعدادات الواجهة -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>إعدادات الواجهة</h3>
+        </div>
+        <div class="panel-body">
+          <label>وضع العرض</label>
+          <select id="themeSelector">
+            <option value="dash-light" selected>فاتح</option>
+            <option value="dash-dark">داكن</option>
+          </select>
+          <button class="btn btn-accent" id="applyThemeBtn">تطبيق</button>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="dash-footer">
+      <div class="container">
+        <small class="muted">© <span id="dashYear"></span> بسمة أمل — جميع الحقوق محفوظة</small>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>
