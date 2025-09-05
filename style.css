@@ -610,6 +610,12 @@ nav.main-nav a:hover {
   font-size: 14px;
 }
 
+.form textarea {
+  resize: none; /* يمنع تغيير الحجم */
+  height: 100px; /* ارتفاع ثابت */
+}
+
+
 /* ========= Footer ========= */
 .site-footer {
   background: var(--navy);
@@ -761,3 +767,4 @@ nav.main-nav a:hover {
 .muted {
   color: #627d98;
 }
+
